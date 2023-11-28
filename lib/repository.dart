@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:http/http.dart';
 
-enum MediaType { image, video, text }
+enum MediaType { image, video, text, lottie }
 
 class WhatsappStory {
   final MediaType? mediaType;

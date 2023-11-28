@@ -11,6 +11,55 @@ class Whatsapp extends StatelessWidget {
       body: FutureBuilder<List<WhatsappStory>>(
         builder: (context, snapshot) {
           if (snapshot.hasData) {
+            snapshot.data!.removeAt(0);
+            snapshot.data!.removeAt(0);
+            snapshot.data!.removeAt(0);
+            snapshot.data!.removeAt(1);
+            snapshot.data!.removeAt(2);
+            snapshot.data!.removeAt(3);
+            snapshot.data!.removeAt(0);
+            snapshot.data!.removeAt(0);
+            snapshot.data!.removeAt(0);
+            snapshot.data!.add(
+              WhatsappStory(
+                mediaType: MediaType.lottie,
+                media: "https://multi-uploads.s3.af-south-1.amazonaws.com/franc/test/One.json",
+                caption: "One.json",
+                duration: 5,
+                when: "2 hours ago",
+                color: "#000000",
+              )
+            );
+            snapshot.data!.add(
+                WhatsappStory(
+                  mediaType: MediaType.lottie,
+                  media: "https://multi-uploads.s3.af-south-1.amazonaws.com/franc/test/Two.json",
+                  caption: "Two.json",
+                  duration: 5,
+                  when: "2 hours ago",
+                  color: "#000000",
+                )
+            );
+            snapshot.data!.add(
+                WhatsappStory(
+                  mediaType: MediaType.lottie,
+                  media: "https://multi-uploads.s3.af-south-1.amazonaws.com/franc/test/Three.json",
+                  caption: "Three.json",
+                  duration: 5,
+                  when: "2 hours ago",
+                  color: "#000000",
+                )
+            );
+            snapshot.data!.add(
+                WhatsappStory(
+                  mediaType: MediaType.lottie,
+                  media: "https://multi-uploads.s3.af-south-1.amazonaws.com/franc/test/Scene01.json",
+                  caption: "Scene01.json",
+                  duration: 5,
+                  when: "2 hours ago",
+                  color: "#000000",
+                )
+            );
             return StoryViewDelegate(
               stories: snapshot.data,
             );
@@ -86,6 +135,14 @@ class _StoryViewDelegateState extends State<StoryViewDelegate> {
           ),
         );
       }
+      if (story.mediaType == MediaType.lottie) {
+        storyItems.add(StoryItem.pageLottie(
+          story.media!,
+          controller: controller,
+          duration: Duration(milliseconds: (story.duration! * 1000).toInt()),
+          caption: story.caption
+        ));
+      }
     });
 
     when = widget.stories![0].when;
@@ -95,11 +152,6 @@ class _StoryViewDelegateState extends State<StoryViewDelegate> {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        CircleAvatar(
-          radius: 24,
-          backgroundImage: NetworkImage(
-              "https://avatars2.githubusercontent.com/u/5024388?s=460&u=d260850b9267cf89188499695f8bcf71e743f8a7&v=4"),
-        ),
         SizedBox(
           width: 16,
         ),
@@ -107,13 +159,6 @@ class _StoryViewDelegateState extends State<StoryViewDelegate> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text(
-                "Not Grッ",
-                style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white),
-              ),
               Text(
                 when!,
                 style: TextStyle(

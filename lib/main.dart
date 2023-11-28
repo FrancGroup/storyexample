@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Story Demo',
       theme: ThemeData(
-        accentColor: Colors.red,
+        hintColor: Colors.red,
       ),
       home: NavigationPage(),
     );
@@ -92,23 +92,6 @@ class NavigationPage extends StatelessWidget {
             Expanded(
               child: SizedBox(),
             ),
-            Column(
-              children: <Widget>[
-                Text(
-                  "Powered by",
-                  style: TextStyle(
-                    color: Colors.grey,
-                  ),
-                ),
-                Text(
-                  "github/blackmann",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                  ),
-                )
-              ],
-            )
           ],
         ),
       ),
