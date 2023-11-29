@@ -23,9 +23,9 @@ class Whatsapp extends StatelessWidget {
             snapshot.data!.add(
               WhatsappStory(
                 mediaType: MediaType.lottie,
-                media: "https://multi-uploads.s3.af-south-1.amazonaws.com/franc/test/One.json",
+                media: "https://multi-uploads.s3.af-south-1.amazonaws.com/franc/test/Conditional/na_intro_personal.json",
                 caption: "One.json",
-                duration: 5,
+                duration: 8,
                 when: "2 hours ago",
                 color: "#000000",
               )
@@ -33,7 +33,7 @@ class Whatsapp extends StatelessWidget {
             snapshot.data!.add(
                 WhatsappStory(
                   mediaType: MediaType.lottie,
-                  media: "https://multi-uploads.s3.af-south-1.amazonaws.com/franc/test/Two.json",
+                  media: "https://multi-uploads.s3.af-south-1.amazonaws.com/franc/test/Conditional/na_deposits_group.json",
                   caption: "Two.json",
                   duration: 5,
                   when: "2 hours ago",
@@ -43,7 +43,7 @@ class Whatsapp extends StatelessWidget {
             snapshot.data!.add(
                 WhatsappStory(
                   mediaType: MediaType.lottie,
-                  media: "https://multi-uploads.s3.af-south-1.amazonaws.com/franc/test/Three.json",
+                  media: "https://multi-uploads.s3.af-south-1.amazonaws.com/franc/test/Conditional/na_projected_growth_personal.json",
                   caption: "Three.json",
                   duration: 5,
                   when: "2 hours ago",
@@ -53,8 +53,29 @@ class Whatsapp extends StatelessWidget {
             snapshot.data!.add(
                 WhatsappStory(
                   mediaType: MediaType.lottie,
-                  media: "https://multi-uploads.s3.af-south-1.amazonaws.com/franc/test/Scene01.json",
+                  media: "https://multi-uploads.s3.af-south-1.amazonaws.com/franc/test/Conditional/na_growth_group.json",
                   caption: "Scene01.json",
+                  duration: 5,
+                  when: "2 hours ago",
+                  color: "#000000",
+                )
+            );
+            snapshot.data!.add(
+                WhatsappStory(
+                  mediaType: MediaType.lottie,
+                  media: "https://multi-uploads.s3.af-south-1.amazonaws.com/franc/test/Conditional/na_growth_personal.json",
+                  caption: "Scene02.json",
+                  duration: 5,
+                  when: "2 hours ago",
+                  color: "#000000",
+                )
+            );
+            //
+            snapshot.data!.add(
+                WhatsappStory(
+                  mediaType: MediaType.lottie,
+                  media: "https://multi-uploads.s3.af-south-1.amazonaws.com/franc/test/Conditional/na_goals_group.json",
+                  caption: "Scene02.json",
                   duration: 5,
                   when: "2 hours ago",
                   color: "#000000",

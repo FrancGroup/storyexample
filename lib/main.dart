@@ -65,22 +65,11 @@ class NavigationPage extends StatelessWidget {
             SizedBox(
               height: 24,
             ),
-            NavigationItem(
-              title: "Google News Example",
-              description:
-                  "A look at inline stories just like Google News highlights",
-              icon: Image.asset("assets/images/gnews.png"),
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => GnewsView()),
-                );
-              },
-            ),
             SizedBox(
               height: 16,
             ),
             NavigationItem(
-              title: "Whatsapp Custom Story",
+              title: "Story Demo",
               description: "Demo on full page stories with customizations",
               icon: Image.asset("assets/images/whatsapp.png"),
               onTap: () {
